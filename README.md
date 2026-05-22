@@ -122,7 +122,7 @@ DEEPSEEK_TOKEN=token_yang_kamu_salin_disini
 ### 4️⃣ Jalankan
 
 ```bash
-python fixed3_v5.py
+python server.py
 ```
 
 ```
