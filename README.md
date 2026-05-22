@@ -35,6 +35,18 @@
 
 ---
 
+## 🖥️ Demo
+
+**Server berhasil jalan:**
+
+![Server Running](screenshots/server.jpg)
+
+**Test request via curl — response sukses:**
+
+![Curl Test](screenshots/curl.jpg)
+
+---
+
 ## 📁 Struktur Project
 
 ```
@@ -55,8 +67,8 @@
 ### 1️⃣ Clone Repository
 
 ```bash
-git clone https://github.com/username/deepseek-pow-proxy.git
-cd deepseek-pow-proxy
+git clone https://github.com/muhammad194494-pixel/deepseek-proxy.git
+cd deepseek-proxy
 ```
 
 ### 2️⃣ Install Dependencies
@@ -132,6 +144,19 @@ Ganti setting di app kamu dengan:
 Base URL  :  http://localhost:7000/v1
 API Key   :  ds-free  (isi bebas)
 Model     :  deepseek-chat
+```
+
+### Contoh dengan `curl`
+
+```bash
+curl -X POST http://localhost:7000/v1/chat/completions \
+  -H "Content-Type: application/json" \
+  -H "Authorization: Bearer free" \
+  -d '{
+    "model": "deepseek-chat",
+    "messages": [{"role": "user", "content": "Halo!"}],
+    "stream": false
+  }'
 ```
 
 ### Contoh dengan Python `openai` SDK
