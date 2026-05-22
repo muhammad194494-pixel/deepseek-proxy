@@ -65,17 +65,47 @@ cd deepseek-pow-proxy
 pip install -r requirements.txt
 ```
 
-### 3️⃣ Setup Token
+### 3️⃣ Ambil Token DeepSeek dari DevTools
+
+Token diambil dari header request saat kamu pakai DeepSeek. Begini caranya:
+
+**Di Browser (PC):**
+
+1. Buka [chat.deepseek.com](https://chat.deepseek.com) dan login
+2. Tekan `F12` → buka tab **Network**
+3. Kirim pesan apapun ke DeepSeek
+4. Cari request ke `chat/completion` lalu klik
+5. Buka tab **Headers** → bagian **Request Headers**
+6. Temukan baris ini:
+   ```
+   authorization: Bearer XXXXXXXXXXXXXXXX
+   ```
+7. Salin teks setelah kata `Bearer ` — itulah token kamu
+
+**Di Android (via HTTP Toolkit):**
+
+1. Install [HTTP Toolkit](https://httptoolkit.com) di PC dan di HP
+2. Intercept traffic dari app DeepSeek
+3. Kirim pesan di app DeepSeek
+4. Cari request `POST /api/v0/chat/completion`
+5. Di Headers temukan:
+   ```
+   authorization: Bearer XXXXXXXXXXXXXXXX
+   ```
+6. Salin teks setelah `Bearer ` — itulah token kamu
+
+**Simpan token ke file `.env`:**
 
 ```bash
-# Salin template .env
 cp .env.example .env
-
-# Buka .env dan isi token DeepSeek kamu
-# DEEPSEEK_TOKEN=token_kamu_disini
 ```
 
-> 💡 Dapatkan token di: [chat.deepseek.com](https://chat.deepseek.com) → Settings → API
+Buka `.env` lalu isi:
+```
+DEEPSEEK_TOKEN=token_yang_kamu_salin_disini
+```
+
+> ⚠️ Token bersifat pribadi — jangan share dan jangan push ke GitHub!
 
 ### 4️⃣ Jalankan
 
