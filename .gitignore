@@ -1,0 +1,19 @@
+# Rahasia — jangan push ke GitHub
+.env
+
+# Python cache
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Virtual environment
+venv/
+.venv/
+env/
+
+# PyArmor output
+dist/
+
+# OS
+.DS_Store
+Thumbs.db

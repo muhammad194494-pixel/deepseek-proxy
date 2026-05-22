@@ -1,0 +1,5 @@
+fastapi
+uvicorn
+wasmtime
+requests
+python-dotenv
