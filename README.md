@@ -51,7 +51,7 @@
 
 ```
 📦 deepseek-pow-proxy/
-├── 🐍 fixed3_v5.py        ← entry point utama
+├── 🐍 fserver.py          ← entry point utama
 ├── 🔧 sha3.wasm           ← PoW solver (wajib ada)
 ├── 📋 requirements.txt    ← semua dependency
 ├── 🔑 .env                ← token kamu (tidak di-push)
